@@ -102,7 +102,7 @@ Clone this [repository](https://github.com/Elhambasir/add-person-student-and-tea
 **To run the project follow the following instruction:-**
 
 - Clone this [repository](https://github.com/Elhambasir/add-person-student-and-teacher-classes.git) in your local machine with correct branch.
-- Run files with **.rb** extension
+- Run files **main.rb** in your terminal.
 
 ### Run test
 
