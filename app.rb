@@ -5,7 +5,7 @@ require './book'
 require './rental'
 require './student'
 require './teacher'
-
+require 'pry'
 class App
   def initialize
     @people = []
@@ -51,7 +51,6 @@ class App
     title = gets.chomp
     print 'Author:'
     author = gets.chomp
-    @books << Book.new(title, author)
     puts 'Book created!'
   end
 
