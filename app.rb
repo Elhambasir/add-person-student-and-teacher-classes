@@ -13,15 +13,11 @@ class App
   end
 
   def list_books
-    @books.each do |book|
-      puts "#{book.title} by #{book.author} on #{book.rentals.count} rentals"
-    end
+    @books.each { |book| puts "#{book.title} by #{book.author} on #{book.rentals.count} rentals" }
   end
 
   def list_people
-    @people.each do |person|
-      puts "#{person.name} - #{person.class} - #{person.id}"
-    end
+    @people.each { |person| puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, , Age: #{person.age}" }
   end
 
   def create_person
@@ -51,37 +47,36 @@ class App
     title = gets.chomp
     print 'Author:'
     author = gets.chomp
+    @books << Book.new(title, author)
     puts 'Book created!'
   end
 
   def create_rental
     puts 'Choose a book from the list by number'
-    @books.each_with_index do |book, index|
-      puts "#{index} - #{book.title} by #{book.author}"
-    end
+    @books.each_with_index { |book, index| puts "#{index} - #{book.title} by #{book.author}" }
     book_index = gets.chomp.to_i
     book = @books[book_index]
     puts 'Choose a person from the list by number:'
-    @people.each_with_index do |person, index|
-      puts "#{index} - #{person.name} - #{person.age} - #{person.class}"
-    end
+    @people.each_with_index { |person, index| puts "#{index} - #{person.name} - #{person.age} - #{person.class}" }
     person_index = gets.chomp.to_i
     person = @people[person_index]
-    puts 'Date: '
+    puts 'Date in format yyyy/mm/dd:'
     date = gets.chomp
     Rental.new(date, book, person)
     puts 'Rental created!'
   end
 
   def list_rentals
-    puts 'Choose a person from the list by number'
-    @people.each_with_index do |person, index|
-      puts "#{index} - #{person.name}"
-    end
-    person_index = gets.chomp.to_i
-    person = @people[person_index]
-    person.rentals.each do |rental|
-      puts "Book: #{rental.book.title} - Date: #{rental.date}"
-    end
+    @people.each { |person| puts "ID: #{person.id}, Name: #{person.name}" }
+    print 'ID of person: '
+    person_id = gets.chomp.to_i
+    puts 'Rentals: '
+    person_info = @people.find { |person| person.id == person_id }
+    person_info.rentals.each { |rental| puts "Date: #{rental.date}, Book: #{rental.book.title}" }
+  end
+
+  def exit_app
+    puts 'Exiting...'
+    exit(0)
   end
 end
