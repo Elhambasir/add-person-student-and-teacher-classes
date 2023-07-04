@@ -120,6 +120,9 @@ You can deploy this project using: **Not available**
 - GitHub: [@elhambasir](https://github.com/Elhambasir)
 - LinkedIn: [@basirelham](https://www.linkedin.com/in/basirelhamahmadi)
 
+- GitHub: [@ldouglasot](https://github.com/ldouglasot)
+- LinkedIn: [@douglas-luzinda](https://www.linkedin.com/in/douglas-luzinda/)
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
