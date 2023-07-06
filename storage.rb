@@ -1,5 +1,6 @@
 require 'pry'
 require 'json'
+#Represents the storage class
 class Storage
   def read_file(file_name)
     result = File.read(file_name)
