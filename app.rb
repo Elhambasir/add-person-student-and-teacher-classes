@@ -23,6 +23,8 @@ class App
 
   def list_people
     @people = @storage_handler.load_data('people.json')
+    return if @people.nil?
+
     @people.each do |person|
       puts "[#{person[:person_type] == 1 ? 'Student' : 'Teacher'}] Name: #{person[:name]}, Age: #{person[:age]}"
     end
@@ -125,36 +127,48 @@ class App
 
     date = input_validator.validate_rental_date(input_requester.ask_for_rental_date)
 
-    rental = {
+    rental = create_rental_object(date, book, person)
+    res = @storage_handler.load_data('rental.json')
+    res = check_if_res_is_empty(res, rental)
+    @storage_handler.save_data('rental.json', res)
+    puts 'Rental created!'
+  end
+
+  def check_if_res_is_empty(res, rentals)
+    rental = []
+    if !res.nil? && res.class != Array
+      rental.push(res)
+      rental.push(rentals)
+    elsif !res.nil? && res.instance_of?(Array)
+      rental = res
+      rental.push(rentals)
+    end
+    rental
+  end
+
+  def create_rental_object(date, book, person)
+    {
       date: date,
       book_id: book[:id],
       person_id: person[:id]
     }
-
-    @storage_handler.save_data('rental.json', [rental])
-    puts 'Rental created!'
   end
 
   def list_rentals
     input_requester = InputRequester.new
+    storage_handler = @storage_handler
 
-    rentals = @storage_handler.load_data('rental.json')
-    people = @storage_handler.load_data('people.json')
-    books = @storage_handler.load_data('books.json')
-
-    puts 'Select a person from the list by their ID'
-
-    people.each do |person|
-      puts "ID: #{person[:id]}, Name: #{person[:name]} [#{person[:person_type] == 1 ? 'Student' : 'Teacher'}]"
-    end
+    people = storage_handler.load_data('people.json')
+    books = storage_handler.load_data('books.json')
+    rentals = storage_handler.load_data('rental.json')
 
     pid = input_requester.ask_for_rental_person_id
     rentals = rentals.select { |rental| rental[:person_id] == pid }
 
     rentals.each do |rental|
-      books = books.find { |book| book[:id] == rental[:book_id] }
+      book = books.find { |item| item[:id] == rental[:book_id] }
       persons = people.find { |person| person[:id] == pid }
-      puts "#{rental[:date]} - #{books[:title]} - #{persons[:name]}" if books && persons
+      puts "#{rental[:date]} - #{book[:title]} - #{persons[:name]}" unless book.nil? || persons.nil?
     end
   end
 
