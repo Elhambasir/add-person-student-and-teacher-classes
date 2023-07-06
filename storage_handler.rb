@@ -10,7 +10,6 @@ class StorageHandler
   end
 
   def load_data(file_name)
-    # read file if it is not empty
-    @storage.read_file(file_name) unless File.empty?(file_name)
+    @storage.read_file(file_name)
   end
 end
