@@ -121,7 +121,7 @@ You can deploy this project using: **Not available**
 - LinkedIn: [@basirelham](https://www.linkedin.com/in/basirelhamahmadi)
 
 - GitHub: [@ldouglasot](https://github.com/ldouglasot)
-- LinkedIn: [@douglas-luzinda](https://www.linkedin.com/in/douglas-luzinda/)
+- LinkedIn: [@douglas_luzinda](https://www.linkedin.com/in/douglas-luzinda/)
 
 <!-- FUTURE FEATURES -->
 

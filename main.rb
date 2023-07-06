@@ -1,5 +1,7 @@
 require_relative 'app'
 require_relative 'menu'
+require_relative 'storage_handler'
+require_relative 'storage'
 
 def run_app(app)
   menu_options = {
@@ -30,7 +32,9 @@ def handle_menu_input(app, input)
 end
 
 def main
-  app = App.new
+  storage = Storage.new
+  storage_handler = StorageHandler.new(storage)
+  app = App.new(storage_handler)
 
   puts 'Welcome to the School Library App!'
 
