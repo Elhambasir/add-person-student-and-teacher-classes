@@ -1,5 +1,3 @@
-# Write test for class Student
-
 require_relative '../student'
 
 describe Student do
