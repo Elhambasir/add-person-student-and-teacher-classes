@@ -146,9 +146,6 @@ Feel free to check the [https://github.com/Elhambasir/add-person-student-and-tea
 ## ⭐️ Show your support <a name="support"></a>
 
 
-If you like my OOP school library project kindly comment or Follow me on LinkedIn, Twitter & twitter and always Your feedback will be really appreciated.
-Thanks!
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
