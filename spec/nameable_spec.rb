@@ -1,5 +1,3 @@
-# Write test for class Nameable
-
 require_relative '../nameable'
 
 describe Nameable do
