@@ -1,12 +1,3 @@
-# Write test for class TrimmerDecorator you can see the code of the class bellow:
-# require './decorator'
-# class TrimmerDecorator < Decorator
-#   def correct_name
-#     name = @nameable.correct_name
-#     name.length > 10 ? name[0..9] : name
-#   end
-# end
-
 require_relative '../trimmer_decorator'
 
 describe TrimmerDecorator do
