@@ -1,6 +1,5 @@
 require_relative '../book'
 
-# write test for class Book and its methods
 describe Book do
   let(:book) { Book.new('test', 'elham') }
 
