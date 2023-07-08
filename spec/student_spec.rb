@@ -1,7 +1,7 @@
 require_relative '../student'
 require_relative '../classroom'
 require_relative '../person'
-require 'pry'
+
 describe Student do
   before :each do
     @student = Student.new('John', 24, 'true')
