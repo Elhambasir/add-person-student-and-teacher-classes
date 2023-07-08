@@ -1,4 +1,3 @@
-require 'pry'
 class InputRequester
   def ask_for_book_title
     print 'Title:'
