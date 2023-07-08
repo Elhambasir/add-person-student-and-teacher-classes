@@ -1,5 +1,3 @@
-# Write a test for class @person and their methods
-
 require_relative '../person'
 
 describe Person do
