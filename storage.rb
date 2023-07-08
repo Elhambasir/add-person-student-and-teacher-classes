@@ -1,5 +1,5 @@
-require 'pry'
 require 'json'
+
 class Storage
   def read_file(file_name)
     # Handle if file does not exist
@@ -17,7 +17,3 @@ class Storage
     File.write(file_name, JSON.pretty_generate(data))
   end
 end
-
-# result = File.read(file_name)
-# File.write(file_name, JSON.pretty_generate(data))
-#     JSON.parse(result, symbolize_names: true)

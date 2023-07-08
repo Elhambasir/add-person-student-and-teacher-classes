@@ -117,6 +117,7 @@ You can deploy this project using: **Not available**
 <!-- AUTHORS -->
 ## 👥 Authors <a name="authors"></a>
 
+
 - GitHub: [@elhambasir](https://github.com/Elhambasir)
 - LinkedIn: [@basirelham](https://www.linkedin.com/in/basirelhamahmadi)
 
@@ -145,9 +146,6 @@ Feel free to check the [https://github.com/Elhambasir/add-person-student-and-tea
 
 ## ⭐️ Show your support <a name="support"></a>
 
-
-If you like my OOP school library project kindly comment or Follow me on LinkedIn, Twitter & twitter and always Your feedback will be really appreciated.
-Thanks!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

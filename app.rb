@@ -7,7 +7,6 @@ require './student'
 require './teacher'
 require './input_validator'
 require './input_requester'
-require 'pry'
 
 class App
   def initialize(storage_handler)

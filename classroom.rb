@@ -1,6 +1,6 @@
+require_relative 'student'
 class Classroom
-  attr_accessor :label
-  attr_reader :students
+  attr_accessor :label, :students
 
   def initialize(label)
     @label = label
@@ -9,6 +9,6 @@ class Classroom
 
   def add_student(student)
     @students << student
-    students.classroom = self
+    student.classroom = self
   end
 end
