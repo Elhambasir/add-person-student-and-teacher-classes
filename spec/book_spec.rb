@@ -1,6 +1,7 @@
 require_relative '../book'
 require_relative '../person'
 require_relative '../rental'
+
 describe Book do
   let(:book) { Book.new('test', 'elham') }
   let(:person) { Person.new('elham', 23, true) }
